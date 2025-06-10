@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
   <meta charset="UTF-8">
   <title>Rahel Wellness Club</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-<!-- Navigation Bar with Search & Menu -->
-<div style="display: flex; justify-content: space-between; align-items: center; background-color: #7ac142; padding: 10px 20px; color: white;">
-  <!-- Left menu button -->
+<body> style="background-color: #f9f9f9; font-family: Arial, sans-serif;">
+<!-- Fixed Navigation Bar -->
+<div style="display: flex; justify-content: space-between; align-items: center; background-color: white; padding: 10px 20px; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 1000;">
+  <!-- Left Menu Button -->
   <div>
-    <button onclick="toggleMenu()" style="font-size: 20px; background: none; border: none; color: white; cursor: pointer;">☰</button>
+    <button onclick="toggleMenu()" style="font-size: 24px; background: none; border: none; color: #333; cursor: pointer;">☰</button>
   </div>
+  <!-- Site Title -->
+  <div style="font-weight: bold; font-size: 16px; color: #1e5631;">Rahel Wellness Club</div>
 
-  <!-- Site title -->
-  <div style="font-weight: bold;">Rahel Wellness Club</div>
-
-  <!-- Search bar -->
+  <!-- Search Bar -->
   <div>
-    <input type="text" id="searchInput" placeholder="Search..." style="padding: 6px; border-radius: 5px; border: none;">
+    <input type="text" id="searchInput" placeholder="Search..." style="padding: 6px 10px; border-radius: 5px; border: 1px solid #ccc;">
   </div>
 </div>
-
-<!-- Hidden menu list -->
-<div id="dropdownMenu" style="display: none; background-color: #f0fdf4; padding: 10px; text-align: left;">
-  <a href="#" style="display: block; padding: 5px 0;">🏠 Home</a>
-  <a href="#plans" style="display: block; padding: 5px 0;">📦 Plans</a>
-  <a href="#community" style="display: block; padding: 5px 0;">💬 Chat</a>
-  <a href="#" style="display: block; padding: 5px 0;">📞 Contact</a>
+<!-- Hidden Dropdown Menu -->
+<div id="dropdownMenu" style="display: none; background-color: #f8f8f8; padding: 10px 20px; border-bottom: 1px solid #ccc;">
+  <a href="#" style="display: block; padding: 8px 0; color: #1e5631; text-decoration: none;">🏠 Home</a>
+  <a href="#plans" style="display: block; padding: 8px 0; color: #1e5631; text-decoration: none;">📦 Plans</a>
+  <a href="#community" style="display: block; padding: 8px 0; color: #1e5631; text-decoration: none;">💬 Chat</a>
+  <a href="#" style="display: block; padding: 8px 0; color: #1e5631; text-decoration: none;">📞 Contact</a>
 </div>
 
 <!-- Your existing header comes below this -->
 <header style="background-color: #7ac142; padding: 20px; text-align: center;">
   <h1 style="color: white;">Welcome to Rahel Wellness Club</h1>
   <header style="background-color: #7ac142; padding: 20px; text-align: center;">
-    <h1 style="color: white;">Welcome to Rahel Wellness Club</h1>
+  <h1 style="color: white; margin-bottom: 10px;">Welcome to Rahel Wellness Club</h1>
+  <p style="color: white; font-size: 16px;">Your journey to a healthier you starts here.</p>
+</header>
     <p style="color: white;">Your journey to a healthier you starts here.</p>
   </header>
 
