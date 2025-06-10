@@ -12,4 +12,7 @@ function showFeature() {
   if (selected !== "none") {
     document.getElementById(selected).style.display = "block";
   }
+} function toggleMenu() {
+  const menu = document.getElementById("dropdownMenu");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
 }
