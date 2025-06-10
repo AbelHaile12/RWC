@@ -1,116 +1,90 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Rahel Wellness Club</title>
-    <link rel="stylesheet" href="style.css">
-</head> <script>
-  function showFeature() {
-    const selected = document.getElementById("featureSelect").value;
-    const boxes = document.getElementsByClassName("feature-box");
-    
-    for (let i = 0; i < boxes.length; i++) {
-      boxes[i].style.display = "none";
-    }
-
-    if (selected !== "none") {
-      document.getElementById(selected).style.display = "block";
-    }
-  }
-</script>
+  <meta charset="UTF-8">
+  <title>Rahel Wellness Club</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <header>
-        <h1>Welcome to Rahel Wellness Club</h1>
-        <p>Your journey to a healthier you starts here.</p>
-    </header>
-    <section class="intro">
-        <img src="rahel.jpg" alt="Rahel's Photo" class="rahel-photo">
-        </p> <section style="max-width: 600px; margin: 40px auto; padding: 30px; background-color: #fffaf2; border-left: 5px solid #1e5631; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); font-family: 'Georgia', serif;">
-  <div style="display: flex; align-items: center; gap: 20px;">
-    <img src="rahel.jpg" alt="Rahel" style="width: 80px; height: 80px; border-radius: 50%; border: 2px solid #1e5631;">
-    <div>
-      <p style="margin: 0; font-size: 18px; color: #1e5631;"><strong>Rahel Haile</strong></p>
-      <p style="margin: 5px 0 0; color: #444;"><em>Registered Dietitian</em></p>
+  <header style="background-color: #7ac142; padding: 20px; text-align: center;">
+    <h1 style="color: white;">Welcome to Rahel Wellness Club</h1>
+    <p style="color: white;">Your journey to a healthier you starts here.</p>
+  </header>
+
+  <section class="intro" style="text-align: center; padding: 30px;">
+    <img src="rahel.jpg" alt="Rahel" style="width: 120px; height: 120px; border-radius: 50%; margin-bottom: 20px;">
+    <p style="max-width: 600px; margin: 0 auto;">Hi, I'm Rahel – a registered dietitian dedicated to helping you manage your weight naturally and effectively. Join our community to get support, guidance, and motivation tailored just for you.</p>
+  </section>
+
+  <section style="max-width: 600px; margin: 30px auto; padding: 20px; border-left: 4px solid #1e5631; background-color: #fefdf8;">
+    <div style="display: flex; align-items: center; gap: 15px;">
+      <img src="rahel.jpg" alt="Rahel" style="width: 60px; height: 60px; border-radius: 50%;">
+      <div>
+        <h3 style="margin: 0;">Rahel Haile</h3>
+        <p style="margin: 0; font-style: italic; font-size: 14px;">Registered Dietitian</p>
+      </div>
     </div>
+    <p style="margin-top: 20px;">“Welcome to Rahel Wellness Club. I’m here to support you with natural, sustainable, and personalized guidance on your journey toward better health. You’re not alone in this — let’s grow stronger together.”</p>
+  </section>
+
+  <section style="max-width: 600px; margin: 30px auto; background-color: #f0fdf4; padding: 20px; border-radius: 10px;">
+    <h2 style="text-align: center; color: #1e5631;">What You’ll Get Inside</h2>
+    <ul style="list-style: none; padding: 0; font-size: 16px;">
+      <li>✅ Personalized weight loss plan</li>
+      <li>🥗 Dietitian-approved recipes</li>
+      <li>💬 Daily motivation & support</li>
+      <li>👥 Access to a private community</li>
+      <li>📅 Weekly wellness challenges</li>
+      <li>📊 Tools to track your progress</li>
+    </ul>
+  </section>
+
+  <!-- 🔽 Dropdown Filter -->
+  <section style="text-align: center; margin: 40px 0;">
+    <label for="featureSelect" style="font-weight: bold;">Choose a Topic:</label>
+    <select id="featureSelect" onchange="showFeature()" style="padding: 10px; margin-left: 10px; font-size: 16px;">
+      <option value="none">-- Select --</option>
+      <option value="weightloss">✅ Weight Loss Support</option>
+      <option value="challenges">📅 Weekly Challenges</option>
+      <option value="community">💬 Private Community</option>
+      <option value="guidance">🥗 Dietitian-Led Guidance</option>
+    </select>
+  </section>
+
+  <!-- 🔍 Hidden Sections for Dropdown -->
+  <div id="weightloss" class="feature-box" style="display:none; text-align: center;">
+    <h3>✅ Weight Loss Support</h3>
+    <p>Customized plans to help you reach your health goals step by step.</p>
   </div>
-  <p style="margin-top: 20px; font-size: 16px; color: #333; line-height: 1.6;">
-    “Welcome to Rahel Wellness Club. I’m here to support you with natural, sustainable, and personalized guidance on your journey toward better health. You're not alone in this — let's grow stronger together.”
-  </p>
-</section>
-  <!-- Dropdown Feature Section -->
-<div style="text-align: center; margin: 30px 0;">
-  <label for="featureSelect" style="font-weight: bold;">Choose a Topic:</label>
-  <select id="featureSelect" onchange="showFeature()" style="padding: 10px; margin-left: 10px; font-size: 16px;">
-    <option value="none">-- Select --</option>
-    <option value="challenges">📅 Weekly Challenges</option>
-    <option value="community">💬 Private Community</option>
-    <option value="guidance">🥗 Dietitian-Led Guidance</option>
-  </select>
-</div>
-<!-- Hidden Sections -->
-<div id="weightloss" class="feature-box" style="display:none;">
-  <h3>✅ Weight Loss Support</h3>
-  <p>Customized plans to help you reach your health goals step by step.</p>
-</div>
 
-<div id="challenges" class="feature-box" style="display:none;">
-  <h3>📅 Weekly Challenges</h3>
-  <p>Stay motivated with fun and rewarding weekly wellness tasks.</p>
-</div>
+  <div id="challenges" class="feature-box" style="display:none; text-align: center;">
+    <h3>📅 Weekly Challenges</h3>
+    <p>Stay motivated with fun and rewarding weekly wellness tasks.</p>
+  </div>
 
-<div id="community" class="feature-box" style="display:none;">
-  <h3>💬 Private Community</h3>
-  <p>Connect with members who are on the same journey as you in our supportive space.</p>
-</div>
+  <div id="community" class="feature-box" style="display:none; text-align: center;">
+    <h3>💬 Private Community</h3>
+    <p>Connect with members who are on the same journey as you in our supportive space.</p>
+  </div>
 
-<div id="guidance" class="feature-box" style="display:none;">
-  <h3>🥗 Dietitian-Led Guidance</h3>
-  <p>Work directly with Rahel to receive expert advice tailored to your needs.</p>
-</div>
+  <div id="guidance" class="feature-box" style="display:none; text-align: center;">
+    <h3>🥗 Dietitian-Led Guidance</h3>
+    <p>Work directly with Rahel to receive expert advice tailored to your needs.</p>
+  </div>
 
-<!-- Now continue your existing subscription block -->
-<section class="subscriptions">
-      <div style="text-align: center; margin: 30px 0;">
-  <label for="featureSelect" style="font-weight: bold;">Choose a Topic:</label>
-  <select id="featureSelect" onchange="showFeature()" style="padding: 10px; margin-left: 10px; font-size: 16px;">
-    <option value="none">-- Select --</option>
-    <option value="weightloss">✅ Weight Loss Support</option>
-    <option value="challenges">📅 Weekly Challenges</option>
-    <option value="community">💬 Private Community</option>
-    <option value="guidance">🥗 Dietitian-Led Guidance</option>
-  </select>
-</div>
+  <!-- 💳 Plans -->
+  <section style="text-align: center; margin: 40px 0;">
+    <h2>Choose Your Plan</h2>
+    <button onclick="subscribe('monthly')" style="padding: 10px 20px; margin: 10px;">Subscribe Monthly - $29</button>
+    <button onclick="subscribe('yearly')" style="padding: 10px 20px; margin: 10px;">Subscribe Yearly - $299</button>
+  </section>
 
-<!-- Toggle Sections -->
-<div id="weightloss" class="feature-box" style="display:none;">
-  <h3>✅ Weight Loss Support</h3>
-  <p>Customized plans to help you reach your health goals step by step.</p>
-</div>
+  <!-- 💬 Chat -->
+  <section style="text-align: center;">
+    <h2>Community Chat</h2>
+    <a href="https://chat.whatsapp.com/EukIRCEhCmdBzJSk7F3YJ4" style="color: purple;">Join our private members-only chat</a>
+  </section>
 
-<div id="challenges" class="feature-box" style="display:none;">
-  <h3>📅 Weekly Challenges</h3>
-  <p>Stay motivated with fun and rewarding weekly wellness tasks.</p>
-</div>
-
-<div id="community" class="feature-box" style="display:none;">
-  <h3>💬 Private Community</h3>
-  <p>Connect with members who are on the same journey as you in our supportive space.</p>
-</div>
-
-<div id="guidance" class="feature-box" style="display:none;">
-  <h3>🥗 Dietitian-Led Guidance</h3>
-  <p>Work directly with Rahel to receive expert advice tailored to your needs.</p>
-</div>  <h2>Choose Your Plan</h2>
-       <div style="text-align: center; margin-top: 20px;">
-  <a href="https://buy.stripe.com/14A7sL59R6Db6ZfbZC7wA02" style="padding: 10px 20px; background-color: #e6f0ff; border-radius: 20px; text-decoration: none;">Subscribe Monthly - $29</a>
-  <a href="https://buy.stripe.com/14A8wP31J4v33N31kY7wA03" style="padding: 10px 20px; background-color: #e6f0ff; border-radius: 20px; text-decoration: none; margin-left: 10px;">Subscribe Yearly - $299</a>
-</div>
-    </section>
-    <section class="community">
-        <h2>Community Chat</h2>
-        <a href="https://chat.whatsapp.com/EukIRCEhCmdBzJSk7F3YJ4" target="_blank" style="color: purple;">Join our private members-only chat</a></p>
-    </section>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
