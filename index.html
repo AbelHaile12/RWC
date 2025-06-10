@@ -47,8 +47,43 @@
     <li>👥 Access to a private community</li>
     <li>📆 Weekly wellness challenges</li>
   </ul>
-</section>
-    <section class="subscriptions"><div style="background-color: #f0fdf4; padding: 20px 10px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-family: 'Segoe UI', sans-serif; font-size: 16px; color: #1e5631; font-weight: 500; border-top: 2px solid #cceedd; border-bottom: 2px solid #cceedd;">
+</section> 
+  <!-- Dropdown Feature Section -->
+<div style="text-align: center; margin: 30px 0;">
+  <label for="featureSelect" style="font-weight: bold;">Choose a Topic:</label>
+  <select id="featureSelect" onchange="showFeature()" style="padding: 10px; margin-left: 10px; font-size: 16px;">
+    <option value="none">-- Select --</option>
+    <option value="weightloss">✅ Weight Loss Support</option>
+    <option value="challenges">📅 Weekly Challenges</option>
+    <option value="community">💬 Private Community</option>
+    <option value="guidance">🥗 Dietitian-Led Guidance</option>
+  </select>
+</div>
+<!-- Hidden Sections -->
+<div id="weightloss" class="feature-box" style="display:none;">
+  <h3>✅ Weight Loss Support</h3>
+  <p>Customized plans to help you reach your health goals step by step.</p>
+</div>
+
+<div id="challenges" class="feature-box" style="display:none;">
+  <h3>📅 Weekly Challenges</h3>
+  <p>Stay motivated with fun and rewarding weekly wellness tasks.</p>
+</div>
+
+<div id="community" class="feature-box" style="display:none;">
+  <h3>💬 Private Community</h3>
+  <p>Connect with members who are on the same journey as you in our supportive space.</p>
+</div>
+
+<div id="guidance" class="feature-box" style="display:none;">
+  <h3>🥗 Dietitian-Led Guidance</h3>
+  <p>Work directly with Rahel to receive expert advice tailored to your needs.</p>
+</div>
+
+<!-- Now continue your existing subscription block -->
+<section class="subscriptions">
+  <div style="...">✅ Weight Loss Support</div>
+  ...  <section class="subscriptions"><div style="background-color: #f0fdf4; padding: 20px 10px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-family: 'Segoe UI', sans-serif; font-size: 16px; color: #1e5631; font-weight: 500; border-top: 2px solid #cceedd; border-bottom: 2px solid #cceedd;">
   <div>✅ Weight Loss Support</div>
   <div>📅 Weekly Challenges</div>
   <div>💬 Private Community</div>
