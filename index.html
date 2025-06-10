@@ -5,7 +5,20 @@
     <meta charset="UTF-8">
     <title>Rahel Wellness Club</title>
     <link rel="stylesheet" href="style.css">
-</head>
+</head> <script>
+  function showFeature() {
+    const selected = document.getElementById("featureSelect").value;
+    const boxes = document.getElementsByClassName("feature-box");
+    
+    for (let i = 0; i < boxes.length; i++) {
+      boxes[i].style.display = "none";
+    }
+
+    if (selected !== "none") {
+      document.getElementById(selected).style.display = "block";
+    }
+  }
+</script>
 <body>
     <header>
         <h1>Welcome to Rahel Wellness Club</h1>
@@ -41,7 +54,37 @@
   <div>💬 Private Community</div>
   <div>🥗 Dietitian-Led Guidance</div>
 </div>
-        <h2>Choose Your Plan</h2>
+      <div style="text-align: center; margin: 30px 0;">
+  <label for="featureSelect" style="font-weight: bold;">Choose a Topic:</label>
+  <select id="featureSelect" onchange="showFeature()" style="padding: 10px; margin-left: 10px; font-size: 16px;">
+    <option value="none">-- Select --</option>
+    <option value="weightloss">✅ Weight Loss Support</option>
+    <option value="challenges">📅 Weekly Challenges</option>
+    <option value="community">💬 Private Community</option>
+    <option value="guidance">🥗 Dietitian-Led Guidance</option>
+  </select>
+</div>
+
+<!-- Toggle Sections -->
+<div id="weightloss" class="feature-box" style="display:none;">
+  <h3>✅ Weight Loss Support</h3>
+  <p>Customized plans to help you reach your health goals step by step.</p>
+</div>
+
+<div id="challenges" class="feature-box" style="display:none;">
+  <h3>📅 Weekly Challenges</h3>
+  <p>Stay motivated with fun and rewarding weekly wellness tasks.</p>
+</div>
+
+<div id="community" class="feature-box" style="display:none;">
+  <h3>💬 Private Community</h3>
+  <p>Connect with members who are on the same journey as you in our supportive space.</p>
+</div>
+
+<div id="guidance" class="feature-box" style="display:none;">
+  <h3>🥗 Dietitian-Led Guidance</h3>
+  <p>Work directly with Rahel to receive expert advice tailored to your needs.</p>
+</div>  <h2>Choose Your Plan</h2>
        <div style="text-align: center; margin-top: 20px;">
   <a href="https://buy.stripe.com/14A7sL59R6Db6ZfbZC7wA02" style="padding: 10px 20px; background-color: #e6f0ff; border-radius: 20px; text-decoration: none;">Subscribe Monthly - $29</a>
   <a href="https://buy.stripe.com/14A8wP31J4v33N31kY7wA03" style="padding: 10px 20px; background-color: #e6f0ff; border-radius: 20px; text-decoration: none; margin-left: 10px;">Subscribe Yearly - $299</a>
